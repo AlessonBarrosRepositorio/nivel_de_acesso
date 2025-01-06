@@ -1,5 +1,5 @@
 <?php
-    $dbHost = 'localhost';
+    $dbhost = 'localhost';
     $dbUsuario = 'root';
     $dbSenha = '';
     $dbNome = 'nivel_de_acesso';
