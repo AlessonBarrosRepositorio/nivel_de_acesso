@@ -1,3 +1,16 @@
+<?php
+    include_once('../sistema/sessionPerfil.php');
+
+    $categoria = verificarAcesso();
+
+    // Confere se o usuário é administrador
+    if ($categoria !== 'cliente') {
+        header('Location: ../index.php'); // Redireciona se não for administrador
+        exit;
+    };
+
+    echo "Bem-vindo, cliente!";
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -6,6 +19,7 @@
     <title>cliente</title>
 </head>
 <body>
+    <a href="../sistema/sair.php">sair</a>
     
 </body>
 </html>
