@@ -10,7 +10,7 @@
         exit;
     }
 
-    echo "Bem-vindo, profissional!";
+    echo "Bem-vindo, $categoria";
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">

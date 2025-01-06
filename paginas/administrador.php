@@ -10,7 +10,7 @@
     }
 
     // Conteúdo da página de administrador
-    echo "Bem-vindo, administrador!";
+    echo "Bem-vindo, $categoria";
 ?>
 
 <!DOCTYPE html>
