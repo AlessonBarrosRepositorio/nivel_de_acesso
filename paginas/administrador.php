@@ -19,19 +19,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>administrador</title>
-    <style>
-        .tamanho{
-            width: 2080px;
-            height: 80%;background: black;
-        }iframe{
-            width: 100%;
-        }
-    </style>
+    <link rel="stylesheet" href="../estilo/reset.css">
+
 </head>
 <body>
     <a href="../sistema/sair.php">sair</a>
-    <div class="tamanho">
-        <iframe src="../global/paginas/paginaInicial.html" frameborder="0"></iframe>
-    </div>
+        <?php
+            // Caminho para o arquivo HTML
+            $paginaHtml = '../global/paginas/paginaInicial.html';
+
+            // Verifica se o arquivo existe antes de tentar carregá-lo
+            if (file_exists($paginaHtml)) {
+                // Carrega o conteúdo do HTML e insere na página
+                echo file_get_contents($paginaHtml);
+            } else {
+                echo '<p>Erro: Página não encontrada.</p>';
+            }
+        ?>
 </body>
 </html>
