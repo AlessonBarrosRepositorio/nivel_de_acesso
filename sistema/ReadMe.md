@@ -1,0 +1,1 @@
+# UPDATE `usuarios` SET `email` = 'alesson@gmail.com' WHERE `usuarios`.`id` = 1;
