@@ -9,15 +9,27 @@
     width: 80rem;
     height: 22rem;
     position: relative;
+    
+    background-color: aqua;    
+}
+.calendario{
+    width: 90%;
+    height: 80%;
+    position: absolute;
+    bottom: 4%; 
+}
+.areaCalendario{
+    width: 100%;    
+    background-color: red;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; 
 }
 .dias{
-    position: absolute;
-    margin: auto;
-    left: 0;
-    right: 0;
-    bottom: 10%;
-    width: 90%;
-    height: 70%;    
+    width: 100%;
+    height: 80%;
 }
 .areaDias{
     display: flex;
@@ -65,27 +77,44 @@
 }
 .btnMarcacao{
     position: absolute;
-    bottom: 12%;
+    bottom: 22%;
 }
 .meses{
-    width: 80%;
+    width: 64%;
     height: 1rem;
-    position: absolute;
-    margin: auto;
-    left: 0;
-    right: 0;
+    
+    margin-bottom: 0.01rem;
+    
+    border-radius: 1px 2px 2px black;
 }
 .areaMeses{
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: row;
-    gap: 0.2rem;
-    background-color: black;
+    gap: 0.68rem;
+    background-color: #ddd;
+    justify-content: center;
+    border-radius: 10px 10px 0  0;
     
 
 }
+
 .mes>h1{
     font-size: 0.8rem;
-    color:white;
+    color:#000;
+    border: 1px solid #000;
+    padding: 0 2px  0 2px ;
+
+}
+.borderRadiusEsquerda{
+    border-radius: 10px 0 0 0;
+}
+.borderRadiusDireita{
+    border-radius: 0  10px 0  0 ;
+}
+.mes>h1:hover{
+    cursor: pointer;
+    background-color: gray;
+    color: #fff;
 }
