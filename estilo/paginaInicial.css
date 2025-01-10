@@ -1,5 +1,69 @@
-.cor_azul{
-    width: 100px;
-    height: 100px;
-    background-color: aqua;
+.principal{
+    width: 100%;
+    height: 38rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.agenda{
+    width: 80rem;
+    height: 22rem;
+    position: relative;
+}
+.dias{
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 10%;
+    width: 90%;
+    height: 70%;    
+}
+.areaDias{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    background-color: gray;
+    box-shadow: 1px 2px 6px black;
+    border-radius: 10px;    
+}
+
+.dia{
+    width: 14%;
+    height: 80%;
+    background-color: aliceblue;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 1px 2px 6px black;
+}
+.areaDia{
+    width: 100%;
+    height:100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.tituloAgenda{
+    width: 24rem;
+    height: 4rem;
+    margin: auto;
+    left: 0;
+    right: 0;
+}
+.areaTituloAgenda{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.tituloDia{
+    font-size: 0.9rem;
+}
+.btnMarcacao{
+    position: absolute;
+    bottom: 12%;
 }
