@@ -118,3 +118,13 @@
     background-color: gray;
     color: #fff;
 }
+.semanas{
+    width: 1rem;
+    height:1rem;
+    background-color: #ddd;
+    position: absolute;
+    bottom: -10px;
+}
+.areaSemanas{
+
+}
