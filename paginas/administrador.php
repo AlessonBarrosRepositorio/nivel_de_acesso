@@ -36,5 +36,45 @@
                 echo '<p>Erro: Página não encontrada.</p>';
             }
         ?>
+
+        <script>
+            // Inicializa a data base como a segunda-feira da semana atual
+            let currentDate = new Date();
+            currentDate.setDate(currentDate.getDate() - currentDate.getDay() + 1);
+
+            const daysContainer = document.querySelectorAll(".dia");
+            const btnLeft = document.querySelector(".btnEsquerda");
+            const btnRight = document.querySelector(".btnDireita");
+
+            function formatDate(date) {
+                const options = { day: '2-digit', month: '2-digit', year: '2-digit' };
+                return date.toLocaleDateString('pt-BR', options);
+            }
+
+            function updateWeekDays() {
+                let tempDate = new Date(currentDate);
+
+                daysContainer.forEach((dia, index) => {
+                    const dayOfWeek = tempDate.toLocaleDateString('pt-BR', { weekday: 'long' });
+                    dia.querySelector(".tituloDia").textContent = `${dayOfWeek.charAt(0).toUpperCase() + dayOfWeek.slice(1)} ${formatDate(tempDate)}`;
+                    tempDate.setDate(tempDate.getDate() + 1);
+                });
+            }
+
+            // Avança para a próxima semana
+            btnRight.addEventListener("click", () => {
+                currentDate.setDate(currentDate.getDate() + 7);
+                updateWeekDays();
+            });
+
+            // Retorna para a semana anterior
+            btnLeft.addEventListener("click", () => {
+                currentDate.setDate(currentDate.getDate() - 7);
+                updateWeekDays();
+            });
+
+            // Inicializa a exibição
+            updateWeekDays();
+        </script>
 </body>
 </html>
